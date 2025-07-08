@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <style></style>
+  </head>
+
+  <body>
+    <nav>
+      <div id="navbar">
+        <div id="navbarTop">
+          <div id="navbarTopLeft">
+            <div id="leftOptions">
+              <span id="menuButton" class="material-symbols-outlined">
+                menu
+              </span>
+            </div>
+            <div id="youtubeLogo">
+              <img
+                src="Images/YoutubeLogo.png"
+                alt="Youtube Logo"
+                width="90px"
+              />
+            </div>
+          </div>
+          <div id="navbarTopMid">
+            <div id="searchBar">
+              <input type="text" name="" id="searchBox" placeholder="Search" />
+              <button id="searchButton">
+                <span class="material-symbols-outlined bold-icon">
+                  search
+                </span>
+              </button>
+            </div>
+            <button id="voiceSearchButton" tooltip="Search with your voice">
+              <span class="material-symbols-outlined"> mic </span>
+            </button>
+          </div>
+          <div id="navbarTopRight">
+            <button id="createButton">
+              <span class="material-symbols-outlined"> add_2 </span>
+              <span>Create</span>
+            </button>
+            <button id="notificationsButton" tooltip="Notifications">
+              <span class="material-symbols-outlined"> notifications </span>
+            </button>
+            <div id="profilePicture">
+              <img src="Images/profilePic.jpeg" width="40px" />
+            </div>
+          </div>
+          <div id="keywordsBar">
+            <div id="keywordsBarButtons"></div>
+            <div id="colorTop"></div>
+            <div class="keywordsBarButton" id="keywordsBarButtonRight">
+              <span class="material-symbols-outlined keywordsBarButtonIcon">
+                Chevron_Right
+              </span>
+            </div>
+            <div id="keywordsList">
+              <div class="keywordsListButton">All</div>
+              <div class="keywordsListButton">Gaming</div>
+              <div class="keywordsListButton">Linux</div>
+              <div class="keywordsListButton">Music</div>
+              <div class="keywordsListButton">Desktop Computers</div>
+              <div class="keywordsListButton">Music</div>
+              <div class="keywordsListButton">Podcasts</div>
+              <div class="keywordsListButton">Computer programming</div>
+              <div class="keywordsListButton">Gaming computers</div>
+              <div class="keywordsListButton">News</div>
+              <div class="keywordsListButton">Counter-Strike 2</div>
+              <div class="keywordsListButton">World Cup</div>
+              <div class="keywordsListButton">Live</div>
+              <div class="keywordsListButton">Playlists</div>
+              <div class="keywordsListButton">Debates</div>
+              <div class="keywordsListButton">Electronic components</div>
+              <div class="keywordsListButton">Funk</div>
+              <div class="keywordsListButton">Watched</div>
+            </div>
+          </div>
+        </div>
+        <div id="lateralButtons">
+          <button class="lateralButtonsButton">
+            <span
+              class="material-symbols-outlined lateralButtonsIcon lateralButtonsHome"
+            >
+              home
+            </span>
+            <div class="buttonText">Home</div>
+          </button>
+          <button class="lateralButtonsButton">
+            <span class="material-symbols-outlined lateralButtonsIcon">
+              auto_awesome_motion
+            </span>
+            <div class="buttonText">Shorts</div>
+          </button>
+          <button class="lateralButtonsButton">
+            <span class="material-symbols-outlined lateralButtonsIcon">
+              hangout_video
+            </span>
+            <div class="buttonText">Subscriptions</div>
+          </button>
+          <button class="lateralButtonsButton">
+            <span class="material-symbols-outlined lateralButtonsIcon">
+              account_circle
+            </span>
+            <div class="buttonText">You</div>
+          </button>
+        </div>
+        <div id="navbarLeftDivisionWButton">
+          <input type="checkbox" id="navbarCheckButton" />
+          <label for="navbarCheckButton" class="custom-checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <div id="navbarLeft">
+            <div id="navbarLeftHomeDiv">
+              <div class="navbarLeftButtons homeButton">
+                <span
+                  class="material-symbols-outlined icon-left-bar lateralButtonsHome"
+                >
+                  home
+                </span>
+                <div class="buttonText">Home</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  auto_awesome_motion
+                </span>
+                <div class="buttonText">Shorts</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  hangout_video
+                </span>
+                <div class="buttonText">Subscriptions</div>
+              </div>
+            </div>
+            <div id="navbarLeftYou">
+              <div class="navbarLeftButtons">
+                <div class="buttonText separatorTitle">You</div>
+                <span class="material-symbols-outlined"> Chevron_Right </span>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  History
+                </span>
+                <div class="buttonText">History</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  Playlist_Play
+                </span>
+                <div class="buttonText">Playlists</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  hangout_video
+                </span>
+                <div class="buttonText">Your videos</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  Schedule
+                </span>
+                <div class="buttonText">Watch later</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  thumb_up
+                </span>
+                <div class="buttonText">Liked videos</div>
+              </div>
+            </div>
+            <div id="navbarLeftSubscriptions">
+              <div class="navbarLeftButtons nonclicableTitle">
+                <div class="buttonText separatorTitle">Subscriptions</div>
+              </div>
+              <div class="navbarLeftButtonsSubs bluepoint">
+                <img
+                  class="subsImages"
+                  src="Images/Channels images/cdK.jpg"
+                  alt=""
+                  width="24px"
+                />
+                <div class="buttonText">CdK</div>
+              </div>
+              <div class="navbarLeftButtonsSubs">
+                <img
+                  class="subsImages"
+                  src="Images/Channels images/brocode.jpg"
+                  alt=""
+                  width="24px"
+                />
+                <div class="buttonText">Bro Code</div>
+              </div>
+              <div class="navbarLeftButtonsSubs">
+                <img
+                  class="subsImages"
+                  src="Images/Channels images/goncalo.jpg"
+                  alt=""
+                  width="24px"
+                />
+                <div class="buttonText">Gonçalo Sousa</div>
+              </div>
+              <div class="navbarLeftButtonsSubs">
+                <img
+                  class="subsImages"
+                  src="Images/Channels images/howto.jpg"
+                  alt=""
+                  width="24px"
+                />
+                <div class="buttonText">How to Beast</div>
+              </div>
+              <div class="navbarLeftButtonsSubs bluepoint">
+                <img
+                  class="subsImages"
+                  src="Images/Channels images/iman.jpg"
+                  alt=""
+                  width="24px"
+                />
+                <div class="buttonText">Iman Gadzhi</div>
+              </div>
+              <div class="navbarLeftButtonsSubs">
+                <img
+                  class="subsImages"
+                  src="Images/Channels images/michael.jpg"
+                  alt=""
+                  width="24px"
+                />
+                <div class="buttonText">Michael Curtis</div>
+              </div>
+              <div class="navbarLeftButtonsSubs">
+                <img
+                  class="subsImages"
+                  src="Images/Channels images/slaying.jpg"
+                  alt=""
+                  width="24px"
+                />
+                <div class="buttonText">Slaying The Dragon</div>
+              </div>
+
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  keyboard_arrow_down
+                </span>
+                <div class="buttonText">Show more</div>
+              </div>
+            </div>
+            <div id="navbarLeftExplore">
+              <div class="navbarLeftButtons nonclicableTitle">
+                <div class="buttonText separatorTitle">Explore</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  local_fire_department
+                </span>
+                <div class="buttonText">Trending</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  music_note
+                </span>
+                <div class="buttonText">Music</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  sensors
+                </span>
+                <div class="buttonText">Live</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  sports_esports
+                </span>
+                <div class="buttonText">Gaming</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  text_ad
+                </span>
+                <div class="buttonText">News</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  rewarded_ads
+                </span>
+                <div class="buttonText">Sports</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  emoji_objects
+                </span>
+                <div class="buttonText">Learning</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  checkroom
+                </span>
+                <div class="buttonText">Fashion & Beauty</div>
+              </div>
+            </div>
+            <div id="navbarLeftMoreFromYouTube">
+              <div class="navbarLeftButtons nonclicableTitle">
+                <div class="buttonText separatorTitle">More from YouTube</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar red">
+                  youtube_activity
+                </span>
+                <div class="buttonText">YouTube Studio</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar red">
+                  smart_toy
+                </span>
+                <div class="buttonText">YouTube Kids</div>
+              </div>
+            </div>
+            <div id="navbarLeftSettings">
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  settings
+                </span>
+                <div class="buttonText">Settings</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  flag
+                </span>
+                <div class="buttonText">Report history</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  help_center
+                </span>
+                <div class="buttonText">Help</div>
+              </div>
+              <div class="navbarLeftButtons">
+                <span class="material-symbols-outlined icon-left-bar">
+                  chat_info
+                </span>
+                <div class="buttonText">Send feedback</div>
+              </div>
+            </div>
+            <div id="navbarLeftFooter">
+              <div id="navbarLeftFooterOne">
+                <span>About</span>
+                <span>Press</span>
+                <span>Copyright</span><br />
+                <span>Contact us</span>
+                <span>Creators</span><br />
+                <span>Advertise</span>
+                <span>Developers</span>
+              </div>
+              <div id="navbarLeftFooterTwo">
+                <span>Terms</span>
+                <span>Privacy</span>
+                <span>Policy & Safety</span>
+                <span>How YouTube works</span><br />
+                <span>Test new features</span>
+              </div>
+              <div id="navbarLeftFooterThree">© 2025 Google LLC</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main id="mainPage">
+      <section id="videosSection">
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-03-09.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid1.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">Upgrade Your Terminal</div>
+              <div id="channelName">Novaspirit Tech</div>
+              <div id="viewsTime">139K views - 11 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-03-24.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid2.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">PROIBIDA DE COMER PORCO!?</div>
+              <div id="channelName">Gonçalo Sousa | EXTRA</div>
+              <div id="viewsTime">163K views - 3 days ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-03-34.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid3.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">Every Developer Needs a Raspberry Pi</div>
+              <div id="channelName">Sam Meech-Ward</div>
+              <div id="viewsTime">1.7M views - 10 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-03-40.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid4.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">Morar na Suíça: O que niguém te mostra</div>
+              <div id="channelName">Tami Zicarelli</div>
+              <div id="viewsTime">6.6K - 2 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-05-37.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid5.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">
+                Luís Figo: Whatch five of his greatest goals
+              </div>
+              <div id="channelName">UEFA</div>
+              <div id="viewsTime">347K views - 7 years ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-05-45.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid7.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">Resumo | Auckland City 1-1 Boca Juniors</div>
+              <div id="channelName">DAZN Portugal</div>
+              <div id="viewsTime">36K views - 3 days ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-05-51.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid8.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">
+                11 Free Windows 11 Apps You Must Download
+              </div>
+              <div id="channelName">Trakin Tech English</div>
+              <div id="viewsTime">207K views - 4 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-07-54.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid6.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">
+                I tried Food From Every Country I've Played
+              </div>
+              <div id="channelName">UR - Cristiano</div>
+              <div id="viewsTime">10M views - 8 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+      </section>
+      <section id="shortsSection">
+        <div id="shortsTitle">
+          <span class="material-symbols-outlined lateralButtonsHome shortsIcon">
+            auto_awesome_motion
+          </span>
+          <div id="shortsTitleText">Shorts</div>
+        </div>
+        <div id="overflowShorts">
+          <div id="shortsContainner">
+            <div id="shortContainner">
+              <div id="shortThumbnail">
+                <img src="Images/videos Images/s1.png" width="100%" />
+              </div>
+              <div id="shortDescription">
+                <div id="shortText">
+                  <div id="shortTitle">Macbook Pro M1 Unboxing</div>
+                  <div id="viewsTime">1M views</div>
+                </div>
+                <span class="material-symbols-outlined" id="threePoints">
+                  more_vert
+                </span>
+              </div>
+            </div>
+            <div id="shortContainner">
+              <div id="shortThumbnail">
+                <img src="Images/videos Images/s2.png" width="100%" />
+              </div>
+              <div id="shortDescription">
+                <div id="shortText">
+                  <div id="shortTitle">Stacked just works better for me</div>
+                  <div id="viewsTime">1M views</div>
+                </div>
+                <span class="material-symbols-outlined" id="threePoints">
+                  more_vert
+                </span>
+              </div>
+            </div>
+            <div id="shortContainner">
+              <div id="shortThumbnail">
+                <img src="Images/videos Images/s3.png" width="100%" />
+              </div>
+              <div id="shortDescription">
+                <div id="shortText">
+                  <div id="shortTitle">Should you buy the ROG Ally X?</div>
+                  <div id="viewsTime">1M views</div>
+                </div>
+                <span class="material-symbols-outlined" id="threePoints">
+                  more_vert
+                </span>
+              </div>
+            </div>
+            <div id="shortContainner">
+              <div id="shortThumbnail">
+                <img src="Images/videos Images/s4.png" width="100%" />
+              </div>
+              <div id="shortDescription">
+                <div id="shortText">
+                  <div id="shortTitle">I took the world's tallest woman</div>
+                  <div id="viewsTime">1M views</div>
+                </div>
+                <span class="material-symbols-outlined" id="threePoints">
+                  more_vert
+                </span>
+              </div>
+            </div>
+            <div id="shortContainner">
+              <div id="shortThumbnail">
+                <img src="Images/videos Images/s5.png" width="100%" />
+              </div>
+              <div id="shortDescription">
+                <div id="shortText">
+                  <div id="shortTitle">Who Uses MAGSAFE for Mac?</div>
+                  <div id="viewsTime">1M views</div>
+                </div>
+                <span class="material-symbols-outlined" id="threePoints">
+                  more_vert
+                </span>
+              </div>
+            </div>
+            <div id="shortContainner">
+              <div id="shortThumbnail">
+                <img src="Images/videos Images/s6.png" width="100%" />
+              </div>
+              <div id="shortDescription">
+                <div id="shortText">
+                  <div id="shortTitle">Portrait or Landscape?</div>
+                  <div id="viewsTime">1M views</div>
+                </div>
+                <span class="material-symbols-outlined" id="threePoints">
+                  more_vert
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="videosSection" class="lastSection">
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-03-09.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid1.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">Upgrade Your Terminal</div>
+              <div id="channelName">Novaspirit Tech</div>
+              <div id="viewsTime">139K views - 11 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-03-24.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid2.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">PROIBIDA DE COMER PORCO!?</div>
+              <div id="channelName">Gonçalo Sousa | EXTRA</div>
+              <div id="viewsTime">163K views - 3 days ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-03-34.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid3.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">Every Developer Needs a Raspberry Pi</div>
+              <div id="channelName">Sam Meech-Ward</div>
+              <div id="viewsTime">1.7M views - 10 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-03-40.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid4.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">Morar na Suíça: O que niguém te mostra</div>
+              <div id="channelName">Tami Zicarelli</div>
+              <div id="viewsTime">6.6K - 2 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-05-37.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid5.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">
+                Luís Figo: Whatch five of his greatest goals
+              </div>
+              <div id="channelName">UEFA</div>
+              <div id="viewsTime">347K views - 7 years ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-05-45.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid7.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">Resumo | Auckland City 1-1 Boca Juniors</div>
+              <div id="channelName">DAZN Portugal</div>
+              <div id="viewsTime">36K views - 3 days ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-05-51.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid8.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">
+                11 Free Windows 11 Apps You Must Download
+              </div>
+              <div id="channelName">Trakin Tech English</div>
+              <div id="viewsTime">207K views - 4 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+        <div id="videoContainner">
+          <div id="videoThumbnail">
+            <img
+              src="Images/videos Images/Screenshot from 2025-06-28 16-07-54.png"
+            />
+          </div>
+          <div id="videoDescription">
+            <div id="channelImage">
+              <img src="Images/Channels images/vid6.jpg" width="100%" />
+            </div>
+            <div id="videoText">
+              <div id="videoTitle">
+                I tried Food From Every Country I've Played
+              </div>
+              <div id="channelName">UR - Cristiano</div>
+              <div id="viewsTime">10M views - 8 months ago</div>
+            </div>
+            <span class="material-symbols-outlined" id="threePoints">
+              more_vert
+            </span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

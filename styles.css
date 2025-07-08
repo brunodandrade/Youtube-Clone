@@ -1,0 +1,781 @@
+* {
+  margin: 0;
+  font-family: Roboto;
+}
+
+:root {
+  --backgroundColor: #0f0f0f;
+  --backgroundColorBlur: #0f0f0fce;
+  --fontColor: #ffffff;
+  --secondFontColor: #222222;
+  --borderColor: #303030;
+  --hoverbuttonColor: #272727;
+  --hoverbuttonColorVisible: #3d3d3d;
+  --hoverbuttonColorVisibleAfter: #81818173;
+  --notificationSubsColor: #3ea6ff;
+  --youtubeRedColor: #ff0033;
+  --fontColor50percent: #ffffffaf;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 26;
+}
+.bold-icon {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 0, "opsz" 26;
+}
+
+.icon-left-bar {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 0, "opsz" 26;
+  font-size: 30px !important;
+  margin: 0 20px 0 14px;
+}
+
+.lateralButtonsIcon {
+  font-variation-settings: "FILL" 0, "wght" 100, "GRAD" 0, "opsz" 26;
+  font-size: 30px !important;
+}
+
+.lateralButtonsHome {
+  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" 0, "opsz" 26;
+  font-size: 30px !important;
+}
+
+body {
+  background-color: var(--backgroundColor);
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+
+#navbarLeftDivisionWButton {
+  position: relative;
+}
+
+#navbarCheckButton {
+  position: absolute;
+  top: -55px;
+  left: 25px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+#navbar {
+  position: fixed;
+  width: 100vw;
+  z-index: 2;
+}
+
+#navbarTop {
+  display: flex;
+  height: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  background-color: var(--backgroundColorBlur);
+  backdrop-filter: blur(100px);
+}
+
+#navbarTopLeft,
+#navbarTopMid,
+#navbarTopRight {
+  display: flex;
+}
+
+#navbarTopLeft {
+  height: 56px;
+  width: 169px;
+  align-items: center;
+  margin-right: 30px;
+  position: relative;
+}
+
+#menuButton {
+  color: var(--fontColor);
+  margin: 0 20px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menuButton:hover {
+  cursor: pointer;
+  background-color: var(--hoverbuttonColor);
+}
+
+#youtubeLogo {
+  margin-right: 20px;
+}
+
+#navbarTopMid {
+  width: 100%;
+  height: 40px;
+  max-width: 740px;
+  justify-content: end;
+  align-items: center;
+}
+
+#searchBar {
+  width: 80%;
+  max-width: 700px;
+  display: flex;
+  height: 40px;
+  position: relative;
+}
+
+#searchBox {
+  width: 100%;
+  border: 1px solid var(--borderColor);
+  border-radius: 50px;
+  color: var(--fontColor);
+  background-color: var(--backgroundColor);
+  font-size: 16px;
+  padding-left: 20px;
+  outline: none;
+}
+
+#searchButton {
+  position: absolute;
+  min-height: 40px;
+  min-width: 64px;
+  border: 1px solid var(--borderColor);
+  border-radius: 0 50px 50px 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondFontColor);
+  color: var(--fontColor);
+  font-weight: 100;
+}
+#searchButton {
+  cursor: pointer;
+}
+
+#voiceSearchButton {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 20px;
+  background-color: var(--secondFontColor);
+  border: none;
+  color: var(--fontColor);
+  position: relative;
+}
+
+#voiceSearchButton:hover {
+  background-color: var(--hoverbuttonColorVisible);
+  cursor: pointer;
+}
+
+#voiceSearchButton::after {
+  content: attr(tooltip);
+  background-color: var(--hoverbuttonColorVisibleAfter);
+  color: white;
+  width: max-content;
+  padding: 10px;
+  position: absolute;
+  font-size: 12px;
+  top: 54px;
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 200ms;
+  transform-origin: top;
+}
+
+#voiceSearchButton:hover::after {
+  transition: 200ms;
+  opacity: 1;
+}
+
+#navbarTopRight {
+  width: max-content;
+  height: 40px;
+  margin-left: 10px;
+  display: flex;
+  margin-right: 20px;
+  align-items: center;
+}
+
+#createButton {
+  width: 97px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background-color: var(--borderColor);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  margin-right: 10px;
+  height: 36px;
+  font-weight: 600;
+}
+
+#createButton:hover {
+  background-color: var(--hoverbuttonColorVisible);
+  cursor: pointer;
+}
+
+#createButton * {
+  margin: 0 2px;
+}
+
+#notificationsButton {
+  border: none;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--backgroundColor);
+  color: var(--fontColor);
+  margin-right: 20px;
+  position: relative;
+}
+
+#notificationsButton::after {
+  content: attr(tooltip);
+  background-color: var(--hoverbuttonColorVisibleAfter);
+  color: white;
+  width: max-content;
+  padding: 10px;
+  position: absolute;
+  font-size: 12px;
+  top: 54px;
+  border-radius: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: 200ms;
+  transform-origin: top;
+}
+
+#notificationsButton:hover::after {
+  opacity: 1;
+  transition: 200ms;
+  transform-origin: top;
+}
+
+#notificationsButton:hover {
+  background-color: var(--hoverbuttonColor);
+  cursor: pointer;
+}
+
+#profilePicture {
+  overflow: hidden;
+  width: 38px;
+  height: 38px;
+  border-radius: 50px;
+  margin-right: 20px;
+}
+
+#profilePicture {
+  cursor: pointer;
+}
+
+#keywordsBar {
+  width: 200px;
+  height: 56px;
+  position: absolute;
+  top: 56px;
+  width: calc(100%);
+  overflow: hidden;
+  background-color: var(--backgroundColorBlur);
+  backdrop-filter: blur(100px);
+}
+
+#keywordsBarButtons {
+  width: calc(100% - 150px);
+  height: 100%;
+  left: 100px;
+  position: fixed;
+}
+
+.keywordsBarButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--backgroundColor);
+}
+
+.keywordsBarButtonIcon {
+  color: var(--fontColor);
+}
+
+.keywordsBarButton:hover {
+  background-color: var(--hoverbuttonColor);
+  cursor: pointer;
+}
+
+#keywordsList {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 150px);
+  position: absolute;
+  left: 100px;
+  overflow: hidden;
+}
+
+.keywordsListButton {
+  width: max-content;
+  text-wrap: nowrap;
+  background-color: var(--borderColor);
+  padding: 8px 12px;
+  color: var(--fontColor);
+  margin: 0 5px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* LATERAL BAR */
+
+#navbarLeft {
+  width: 238px;
+  height: calc(100vh - 54px);
+  overflow: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: var(--borderColor) var(--backgroundColor);
+  justify-content: center;
+  position: relative;
+  overflow-x: hidden;
+  transform: translateX(-238px);
+  transition: 200ms;
+  background-color: var(--backgroundColor);
+  position: fixed;
+}
+
+#navbarLeftHomeDiv,
+#navbarLeftYou,
+#navbarLeftSubscriptions,
+#navbarLeftExplore,
+#navbarLeftMoreFromYouTube,
+#navbarLeftSettings,
+#navbarLeftFooter {
+  width: 90%;
+  position: relative;
+  margin: auto;
+}
+
+#navbarLeftYou,
+#navbarLeftSubscriptions,
+#navbarLeftExplore,
+#navbarLeftMoreFromYouTube,
+#navbarLeftSettings,
+#navbarLeftFooter {
+  margin-top: 20px;
+}
+
+#navbarLeftYou::after,
+#navbarLeftSubscriptions::after,
+#navbarLeftExplore::after,
+#navbarLeftMoreFromYouTube::after,
+#navbarLeftSettings::after {
+  content: "";
+  background-color: var(--hoverbuttonColorVisibleAfter);
+  width: 600px;
+  height: 1px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+#navbarLeftHomeDiv::after {
+  content: "";
+  background-color: var(--hoverbuttonColorVisibleAfter);
+  width: 600px;
+  height: 1px;
+  position: absolute;
+  margin-top: 10px;
+}
+
+.navbarLeftButtons {
+  min-width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border-radius: 5px;
+  color: var(--fontColor);
+  font-size: 14px;
+}
+
+.navbarLeftButtons:hover {
+  background-color: var(--hoverbuttonColor);
+  cursor: pointer;
+}
+
+.homeButton {
+  background-color: var(--hoverbuttonColor);
+}
+
+.homeButton:hover {
+  background-color: var(--hoverbuttonColorVisibleAfter);
+}
+
+.separatorTitle {
+  margin: 0 0 0 20px;
+  font-weight: bold;
+}
+
+.navbarLeftButtonsSubs {
+  min-width: 100%;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  border-radius: 5px;
+  color: var(--fontColor);
+  font-size: 14px;
+}
+
+.navbarLeftButtonsSubs:hover {
+  background-color: var(--hoverbuttonColor);
+  cursor: pointer;
+}
+
+.subsImages {
+  margin: 0 20px;
+  border-radius: 50px;
+}
+
+.nonclicableTitle:hover {
+  background-color: var(--backgroundColor);
+}
+
+.bluepoint {
+  position: relative;
+}
+
+.bluepoint::after {
+  content: "";
+  background-color: var(--notificationSubsColor);
+  width: 4px;
+  height: 4px;
+  position: absolute;
+  right: 10px;
+  border-radius: 50px;
+}
+
+.red {
+  color: var(--youtubeRedColor);
+}
+
+#navbarLeftFooter {
+  color: var(--fontColor50percent);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#navbarLeftFooterOne,
+#navbarLeftFooterTwo,
+#navbarLeftFooterThree {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+#navbarLeftFooterOne *,
+#navbarLeftFooterTwo * {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+#navbarLeftFooterThree {
+  margin-bottom: 10px;
+}
+
+/* LATERAL BUTTONS */
+
+#lateralButtons {
+  width: 72px;
+  height: 100vh;
+  position: fixed;
+  margin-top: 57px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 0;
+}
+
+.lateralButtonsButton {
+  background-color: var(--backgroundColor);
+  border: none;
+  color: var(--fontColor);
+  font-size: 10px;
+
+  width: 64px;
+  height: 74px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.lateralButtonsButton:hover {
+  background-color: var(--hoverbuttonColor);
+  cursor: pointer;
+}
+
+.custom-checkbox:has(input:checked) ~ #navbarLeft {
+  margin-top: 200px;
+}
+
+#navbarCheckButton:checked ~ #navbarLeft {
+  transform: translateX(0);
+}
+
+/* MAIN PAGE */
+
+#mainPage {
+  top: 133px;
+  left: 100px;
+  height: max-content;
+  width: calc(100% - 150px);
+  z-index: -1;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+#videosSection {
+  width: 100%;
+  margin-bottom: 50px;
+  display: flex;
+}
+
+#videoContainner {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 300px;
+  min-height: 230px;
+  max-width: 600px;
+  max-height: 450px;
+  color: var(--fontColor);
+  position: relative;
+
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+#videoThumbnail img {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#videoDescription {
+  display: flex;
+  margin-top: 0;
+  height: 78px;
+}
+
+#channelImage {
+  width: 36px;
+  height: 36px;
+  margin-top: 12px;
+  margin-right: 12px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+#videoText {
+  width: 400px;
+}
+
+#videoTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 10px;
+  text-wrap: nowrap;
+  overflow: hidden;
+
+  width: 90%;
+}
+
+#channelName,
+#viewsTime {
+  font-size: 14px;
+  margin-top: 8px;
+  color: var(--fontColor50percent);
+}
+
+#threePoints {
+  position: absolute;
+  right: 0;
+  bottom: 45px;
+  font-size: 30px;
+}
+
+#videosSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 100%;
+}
+
+/* SHORTS */
+
+#shortsTitle {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#shortsTitle * {
+  margin-right: 10px;
+}
+
+#shortsTitleText {
+  color: var(--fontColor);
+}
+
+.shortsIcon {
+  color: var(--youtubeRedColor);
+}
+
+#shortContainner {
+  width: 100%;
+  max-width: 280px;
+  min-width: 230;
+  height: 490px;
+  cursor: pointer;
+}
+
+#shortThumbnail {
+  width: 100%;
+  min-width: 230px;
+}
+
+#shortText {
+  margin-top: 10px;
+}
+
+#shortTitle {
+  color: var(--fontColor);
+  font-weight: 800;
+}
+
+#shortsSection {
+  display: flex;
+  flex-direction: column;
+}
+
+#shortsContainner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+#overflowShorts {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+}
+
+#lastSection {
+  margin-bottom: 200px;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 655px) {
+  #searchBox {
+    display: none;
+  }
+  #searchButton {
+    background-color: transparent;
+    border: none;
+    right: -10px;
+    max-width: 40px;
+  }
+  #voiceSearchButton {
+    margin: 0;
+  }
+  #profilePicture,
+  #notificationsButton,
+  #createButton {
+    margin: 0 5px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #notificationsButton,
+  #voiceSearchButton {
+    display: none;
+  }
+  #searchButton {
+    right: -25px;
+  }
+
+  #lateralButtons {
+    display: none;
+  }
+
+  #mainPage,
+  #keywordsBar {
+    left: 0;
+
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #videosSection {
+    width: 90%;
+  }
+
+  /* #keywordsBarButtons {
+    left: 100px;
+  } */
+
+  #keywordsList {
+    width: 100%;
+
+    left: 0;
+  }
+
+  .keywordsBarButton {
+    right: 10px;
+  }
+
+  #videoContainner {
+    margin-right: 0;
+  }
+
+  #shortsSection {
+    width: 90%;
+  }
+}
